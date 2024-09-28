@@ -1,28 +1,50 @@
-function grade (marks) {
-    if (marks >=80 && marks <=100)
-        return 'A';
-    else if (marks >=60 && marks <=79)
-        return 'B';
-    else if (marks >=49 && marks <=59)
-        return 'C';
-    else if (marks >=40 && marks <49)
-        return 'D';
-    else return ('E')
-
-}
-function main(){
-    let input = prompt("Enter your marks(0-100):");
-    let marks = parseInt(input);
-    if (!isNaN(marks)&& marks>=0 && marks <=100){
-        let grade=grades(marks);
-        alert(`The grade is:${grade}`);
-    
-    }else {
-        alert('Please enter valid marks between 0 and 100');
+// Define a function called getGrade that will prompt the user to input student marks
+function getGrade() {
+    // Prompt the user to input student marks and store the input in the mark variable
+    let mark = parseInt(prompt("Enter student marks (between 0 and 100): "));
+  
+    // Check if the input mark is within the valid range (0 to 100)
+    if (mark < 0 || mark > 100) {
+      // If the input is invalid, print an error message and exit the function
+      console.log("Invalid input. Please enter a mark between 0 and 100.");
+      return;
     }
-
-}
-
+  
+    // Declare a variable to store the grade
+    let grade;
+  
+    // Check if the mark is greater than 79
+    if (mark > 79) {
+      // If true, assign the grade 'A' to the grade variable
+      grade = "A";
+    } 
+    // Check if the mark is between 60 and 79 (inclusive)
+    else if (mark >= 60 && mark <= 79) {
+      // If true, assign the grade 'B' to the grade variable
+      grade = "B";
+    } 
+    // Check if the mark is between 49 and 59 (inclusive)
+    else if (mark >= 49 && mark <= 59) {
+      // If true, assign the grade 'C' to the grade variable
+      grade = "C";
+    } 
+    // Check if the mark is between 40 and 49 (inclusive)
+    else if (mark >= 40 && mark <= 49) {
+      // If true, assign the grade 'D' to the grade variable
+      grade = "D";
+    } 
+    // If the mark is less than 40
+    else {
+      // Assign the grade 'E' to the grade variable
+      grade = "E";
+    }
+  
+    // Print the calculated grade to the console
+    console.log(`Grade: ${grade}`);
+  }
+  
+  // Call the getGrade function to start the program
+  getGrade();
 
 
 function speedDetector(speed) {
