@@ -4,7 +4,7 @@ function getGrade() {
     let mark = parseInt(prompt("Enter student marks (between 0 and 100): "));
   
     // Check if the input mark is within the valid range (0 to 100)
-    if (mark < 0 || mark > 100) {
+    if (isNaN(mark)||mark < 0 || mark > 100) {
       // If the input is invalid, print an error message and exit the function
       console.log("Invalid input. Please enter a mark between 0 and 100.");
       return;
@@ -40,12 +40,11 @@ function getGrade() {
     }
   
     // Print the calculated grade to the console
-    console.log(`Grade: ${grade}`);
+    alert(`Grade: ${grade}`);
   }
   
   // Call the getGrade function to start the program
   getGrade();
-
 
 function speedDetector(speed) {
     let speedLimit = 70;
