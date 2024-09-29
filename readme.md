@@ -30,8 +30,8 @@ For example, if the speed is 80, it should print: “Points: 2”. If the driver
 - wait for the pull request to be reviewed and merged
 
 # **Contacts**
-- Email: [masinde.sylvester@yahoo.com,akinyiperpetual2@gmail.com,briangarang@gmail.com]
-- Phone: +254 721126698
+- Email: [masinde.sylvester@yahoo.com,akinyiperpetual2@gmail.com,brian_kimathi@yahoo.com]
+- Phone: +254 721126698,
 # **License**
 
 This codechallenge is licensed under the MIT License
