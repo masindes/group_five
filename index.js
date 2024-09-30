@@ -1,12 +1,13 @@
-// Define a function called getGrade that will prompt the user to input student marks
 function getGrade() {
     // Prompt the user to input student marks and store the input in the mark variable
-    let mark = parseInt(prompt("Enter student marks (between 0 and 100): "));
+    
+    let mark = parseInt(prompt("Enter student marks ( 0-100): "));
   
     // Check if the input mark is within the valid range (0 to 100)
     if (isNaN(mark)||mark < 0 || mark > 100) {
       // If the input is invalid, print an error message and exit the function
       console.log("Invalid input. Please enter a mark between 0 and 100.");
+      alert("Invalid input. Please enter a mark between 0 and 100.");
       return;
     }
   
@@ -41,26 +42,50 @@ function getGrade() {
   
     // Print the calculated grade to the console
     alert(`Grade: ${grade}`);
+    
   }
   
   // Call the getGrade function to start the program
   getGrade();
-
-function speedDetector(speed) {
+  
+  
+  
+  
+  
+  
+   
+  function speedDetector() {
+  let  speed =parseInt(prompt('please enter your speed'));
+    
+    // creates a function speed where you have to parse on the value in the speed 
+    
+    if(isNaN(speed)){
+        alert('please enter a valid speed')
+        return;
+    }
     let speedLimit = 70;
     let demeritPoints = 0;
-    if (speed > speedLimit) {
-        console.log('OK');
-    } else {
-        demeritPoints = Math.floor((speed - speedLimit) / 5);
+    if (speed<=speedLimit){
+        console.log(`you have recorded a speed of ${speed} which is acceptable `);
+        alert(`you have recorded a speed of ${speed} which is acceptable ` );
+    }
+    
+     else {
+         demeritPoints = Math.floor((speed - speedLimit) / 5);
         console.log(`points: ${demeritPoints}`);
+        alert(` You have exceeded the expected speed limit, you have  ${demeritPoints} demeritPoints`);
+        
         if (demeritPoints > 12) {
             console.log('License suspended');
+            alert('License suspended');
+            
         } else {
             console.log('Speed is fine');
+            alert(`you have ${demeritPoints}, if you get more ${12-demeritPoints} points, your license will be suspended`);
         }
     }
-}
-// Test The Function
-speedDetector(85); // Output: Points: 2
-speedDetector(120); // Output: Points: 10, License suspended
+  }
+  // Test The Function
+  // speedDetector(85); // Output: Points: 2
+  // speedDetector(120); // Output: Points: 10, License suspended
+  speedDetector()
